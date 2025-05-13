@@ -1,0 +1,493 @@
+/* ========================= */
+/* VARIABLES Y RESET GENERAL */
+/* ========================= */
+
+:root {
+    --violeta: #584583;
+    --gris-claro: #f5f5f5;
+    --gris-oscuro: #333;
+    --blanco: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--gris-oscuro);
+    background-color: var(--blanco);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+
+/* ============ */
+/* NAVBAR */
+/* ============ */
+
+#mainNavbar {
+    background-color: transparent;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    padding: 0.5rem 0;
+    min-height: 80px;
+    height: 80px;
+}
+
+#mainNavbar.scrolled {
+    background-color: var(--blanco);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-link {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+#mainNavbar.scrolled .nav-link {
+    color: #000;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--violeta);
+    margin-left: 120px;
+}
+
+#mainNavbar.scrolled .logo {
+    color: var(--gris-oscuro);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 120px;
+}
+
+
+/* ============ */
+/* HERO SECTION */
+/* ============ */
+
+.hero {
+    height: 100vh;
+    background: url('media/hero-bg.png') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.801);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--violeta);
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+.hero .boton{
+    background-color: var(--violeta);
+    border-color: var(--violeta);
+    border-radius: 50px;
+    transition: transform 0.3s;
+    margin-top: 30px;
+    font-size: 1.2rem;
+}
+.hero .boton:hover {
+    transform: scale(1.02);
+}
+
+
+/* ============ */
+/* SECCIONES GENERALES */
+/* ============ */
+
+.section {
+    padding: 4rem 2rem;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--violeta);
+}
+
+.container h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.section .boton{
+    background-color: var(--violeta);
+    border-color: var(--violeta);
+    border-radius: 50px;
+    transition: transform 0.3s;
+    margin-top: 30px;
+    font-size: 1.2rem;
+}
+.section .boton:hover {
+    transform: scale(1.02);
+}
+
+
+
+.bt-serv{
+    display: flex;
+    justify-content: center;
+}
+
+.servicios{
+    margin-top: 50px ;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.servicios div{
+    width: 30%;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--gris-claro);
+    border-radius: 20px;
+    transition: transform 0.3s;
+}
+
+.servicios div:hover{
+    transform: scale(1.02);
+}
+
+
+/* ============ */
+/* FORMULARIO DE CONTACTO */
+/* ============ */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.contact-form button {
+    padding: 0.8rem;
+    background-color: var(--violeta);
+    color: var(--blanco);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    background-color: #46376a;
+}
+
+
+/* ============ */
+/* GALERÍA */
+/* ============ */
+
+.galeria {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.galeria h2 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: var(--violeta);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.galeria-item {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.galeria-item:hover {
+    transform: scale(1.02);
+}
+
+
+/* ============ */
+/* MODAL */
+/* ============ */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+    width: auto;
+    height: auto;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* ============ */
+/* FOOTER */
+/* ============ */
+
+.footer {
+    text-align: center;
+    padding: 0.5rem; 
+    background-color: var(--gris-claro);
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+    flex-direction: row;
+    background-color: var(--gris-claro);
+    border-color: var(--gris-claro);
+}
+
+.socialContainer {
+    width: 52px;
+    height: 52px;
+    border-radius: 50px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: 0.3s;
+}
+
+/* instagram*/
+.containerOne:hover {
+    background-color: #d62976;
+    transition-duration: 0.3s;
+}
+
+/* Tiktok*/
+.containerTwo:hover {
+    background-color: #25f4ee;
+    transition-duration: 0.3s;
+}
+
+/* Facebook*/
+.containerThree:hover {
+    background-color: #1877f2;
+    transition-duration: 0.3s;
+}
+
+/* Whatsapp*/
+.containerFour:hover {
+    background-color: green;
+    transition-duration: 0.3s;
+}
+
+.socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: 0.3s;
+}
+
+.socialSvg {
+    width: 19px;
+}
+
+.largeIcon {
+    width: 27px;
+    /* Ancho específico solo para el icono de TikTok */
+}
+
+.socialSvg path {
+    fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+/* ============ */
+/* RESPONSIVE */
+/* ============ */
+
+@media (max-width: 768px) {
+
+    #mainNavbar {
+        height: 50px;
+        align-content: center;
+    }
+
+    .navbar .nav-link {
+        margin-right: 0px;
+        color: #000;
+        transition: color 0.3s;
+
+    }
+
+    header ul li a {
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        margin-right: 0;
+    }
+
+    .logo{
+        margin-left: 0;
+    }
+
+    .offcanvas.offcanvas-end.custom-offcanvas {
+        width: 50%;
+        height: 50%;
+        /* Sobrescribe el ancho por defecto de Bootstrap */
+    }
+
+    .hero {
+        width: 100%;
+        height: 500px;
+        padding: 0;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .navbar-collapse {
+        text-align: right;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        margin-right: 10px;
+        background-color: #f8f9fa;
+        z-index: 1000;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-right: 10px;
+    }
+
+    .navbar-nav li ul a {
+        margin-right: 20px;
+    }
+
+    .section h2 {
+        text-align: center;
+    }
+
+    nav .oc-end {
+        width: 50%;
+    }
+
+    .servicios {
+        flex-direction: column;
+    }
+
+    .servicios div{
+        width: 100%;
+        margin: 1rem;
+        
+    }
+
+    .section p{
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .section .container{
+        width: 100%;
+    }
+}
