@@ -359,6 +359,45 @@ body {
 
 
 
+/* PROYECTOS */
+.pro-txt{
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+    align-items: center;
+}
+
+.pro-txt-iz{
+    width: 40%;
+    height: 100vh;
+}
+.pro-txt-iz img{
+    width: 100%;
+}
+.pro-txt-der{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 5%;
+}
+
+.pro-txt-der h5{
+    font-size: 4rem;
+}
+.pro-txt-der p{
+    font-size: 2rem;
+}
+
+.proyecto-cont{
+    width: 100%;
+    margin-top: 80px;
+}
+.carru-proyect{
+    width: 80%;
+    justify-self: center;
+}
+
 /* ============ */
 /* RESPONSIVE */
 /* ============ */
