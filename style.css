@@ -18,7 +18,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     color: var(--gris-oscuro);
-    background-color: var(--blanco);
+    background-color: var(--gris-claro);
     line-height: 1.6;
 }
 
@@ -184,7 +184,7 @@ body {
     width: 30%;
     text-align: center;
     padding: 1rem;
-    background-color: var(--gris-claro);
+    background-color: var(--blanco);
     border-radius: 20px;
     transition: transform 0.3s;
 }
@@ -398,6 +398,25 @@ body {
     justify-self: center;
 }
 
+/* Agregá esto a tu CSS principal (evita solapamientos y mantiene estilo) */
+#btnProyectosLink,
+#btnProyectosToggle {
+    cursor: pointer;
+    color: inherit; /* mantiene color del nav-link */
+    text-decoration: none;
+}
+
+/* Espacio pequeño entre link y toggle */
+#btnProyectosLink { 
+    margin-right: .25rem; 
+}
+
+/* Ajustes visuales: botón toggle sin apariencia de botón */
+.btn.btn-link { 
+    border: 0; background: transparent; 
+}
+
+
 /* ============ */
 /* RESPONSIVE */
 /* ============ */
@@ -430,11 +449,6 @@ body {
         margin-left: 0;
     }
 
-    .offcanvas.offcanvas-end.custom-offcanvas {
-        width: 50%;
-        height: 50%;
-        /* Sobrescribe el ancho por defecto de Bootstrap */
-    }
 
     .hero {
         width: 100%;
@@ -496,5 +510,37 @@ body {
         text-align: center;
         margin-left: 0;
         margin-right: 0;
+    }
+
+    .offcanvas.custom-offcanvas{
+    width: 80%;                
+    max-width: 360px;          
+    height: 100dvh;            
+    z-index: 1100;             
+    }
+
+    .pro-txt{
+        flex-direction: column;
+    }
+    .pro-txt-iz{
+        width: 100%;
+        height: auto;
+    }
+    .pro-txt-der{
+        width: 90%;
+        align-items: center;
+        text-align: center;
+    }
+    .pro-txt-der h5{
+        font-size: 3rem;
+    }
+    .pro-txt-der p{
+        font-size: 1.2rem;
+    }
+    .proyecto-cont{
+        margin-top: 20px;
+    }
+    .carru-proyect{
+        width: 100%;
     }
 }
