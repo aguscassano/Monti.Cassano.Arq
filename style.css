@@ -124,6 +124,10 @@ body {
     transform: scale(1.02);
 }
 
+#parallax {
+    will-change: transform;
+}
+
 
 /* ============ */
 /* SECCIONES GENERALES */
